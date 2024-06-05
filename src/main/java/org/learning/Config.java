@@ -7,9 +7,15 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 
     @Bean
-    Vehicle vehicle(){
+    Vehicle vehicle1(){
         Vehicle v = new Vehicle();
         v.setName("Audi");
+        return v;
+    }
+    @Bean
+    Vehicle vehicle2(){
+        Vehicle v = new Vehicle();
+        v.setName("BMW");
         return v;
     }
     @Bean
