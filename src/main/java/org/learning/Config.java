@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class Config {
+    @Primary
     @Bean
     Vehicle vehicle1(){
         Vehicle v = new Vehicle();
