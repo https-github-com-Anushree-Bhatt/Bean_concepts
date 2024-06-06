@@ -6,21 +6,21 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class Config {
-    @Primary
-    @Bean
+//    @Primary
+    @Bean(name = "audi")
     Vehicle vehicle1(){
         Vehicle v = new Vehicle();
         v.setName("Audi");
         return v;
     }
-    @Primary
-    @Bean
+
+    @Bean(value = "BMW")
     Vehicle vehicle2(){
         Vehicle v = new Vehicle();
         v.setName("BMW");
         return v;
     }
-    @Bean
+    @Bean("hi")
     String helloWorld(){
         return "Hello world!!";
     }
