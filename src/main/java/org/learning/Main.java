@@ -5,8 +5,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(Config.class);
-//        var vehicle = context.getBean(Vehicle.class); --> .NoUniqueBeanDefinitionException
-        var vehicle = context.getBean("vehicle1",Vehicle.class);
+        var vehicle = context.getBean(Vehicle.class);
+//        var vehicle = context.getBean("vehicle1",Vehicle.class);
         System.out.println(vehicle.getName());
 
         var welcome_str = context.getBean(String.class);
