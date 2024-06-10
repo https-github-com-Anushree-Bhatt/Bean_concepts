@@ -13,10 +13,10 @@ public class Config {
     }
 
     @Bean
-    Person person(){
+    Person person(Vehicle vehicle){
         Person p = new Person();
         p.setName("Anu");
-        p.setVehicle(vehicle());
+        p.setVehicle(vehicle);
         return p;
     }
 
