@@ -9,7 +9,7 @@ public class Person {
     private String name;
 
     private final Vehicle vehicle;
-    public Person(@Qualifier(value = "vehicle2") Vehicle vehicle){
+    public Person(Vehicle vehicle){
         this.vehicle = vehicle;
     }
 
