@@ -1,14 +1,12 @@
-package org.learning;
+package org.learning.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value = "personBean")
 public class Person {
     private String name;
-
     private final Vehicle vehicle;
+
     public Person(Vehicle vehicle){
         this.vehicle = vehicle;
     }
@@ -25,7 +23,7 @@ public class Person {
         return vehicle;
     }
 
-
+    //when Vehicle is final , no need of setter method
 
 
 }

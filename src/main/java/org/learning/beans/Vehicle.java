@@ -1,6 +1,6 @@
-package org.learning;
+package org.learning.beans;
 
-import jakarta.annotation.PostConstruct;
+import org.learning.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Vehicle {
     private String name;
     @Autowired
-    private Person person;
+    private VehicleService vehicleService;
 
     public Vehicle(){
         System.out.println("Vehicle created....");
@@ -22,7 +22,12 @@ public class Vehicle {
         this.name = name;
     }
 
-
+    public void playMusic(){
+        vehicleService.playMusic();
+    }
+    public void moveVehicle(){
+        vehicleService.moveVehicle();
+    }
     @Override
     public String toString() {
         return "Vehicle{" +
