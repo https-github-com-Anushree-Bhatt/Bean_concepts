@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Primary;
 @ComponentScan
 public class Config {
     @Bean(name = "v1")
+    @Primary
     public Vehicle vehicle1(){
         Vehicle v = new Vehicle();
         v.setName("Audi");
