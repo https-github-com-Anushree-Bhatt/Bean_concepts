@@ -16,7 +16,7 @@ public class Vehicle {
 
     public Vehicle(){
     }
-
+    @Lookup // this method will be overriden by spring and creates new VS bean everytime!
     public VehicleService getVehicleServiceBean(){
         return vehicleService;
     }
