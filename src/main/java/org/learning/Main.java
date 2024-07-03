@@ -10,15 +10,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(Config.class);
-        System.out.println("Before retrieving Person Bean...");
-        Person p = context.getBean(Person.class);
-        System.out.println("After retrieving person bean...");
+        VehicleService v1 = context.getBean(VehicleService.class);
+        VehicleService v2 = context.getBean(VehicleService.class);
+        System.out.println("v1 hashcode:"+v1.hashCode());
+        System.out.println("v2 hashcode:"+v2.hashCode());
 
     }
 }
 
-//Op:-
-//        Before retrieving Person Bean...
-//        Person bean created
-//        After retrieving person bean...
-//So person bean is created and stored in container after it is accessed in main method in case of singleton - lazy instantiation
+//output:
+//        v1 hashcode:1878169648
+//        v2 hashcode:1781241150
