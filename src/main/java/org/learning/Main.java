@@ -18,7 +18,7 @@ public class Main {
 }
 
 //Op:-
-//        Person bean created
 //        Before retrieving Person Bean...
+//        Person bean created
 //        After retrieving person bean...
-//So person bean is created and stored in container even before main method is executed in case of singleton - eager instantiation
+//So person bean is created and stored in container after it is accessed in main method in case of singleton - lazy instantiation
