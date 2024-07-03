@@ -10,6 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(Config.class);
+        System.out.println("------------------After container creation-------------------");
         VehicleService v1 = context.getBean(VehicleService.class);
         VehicleService v2 = context.getBean(VehicleService.class);
         System.out.println("v1 hashcode:"+v1.hashCode());
@@ -18,6 +19,3 @@ public class Main {
     }
 }
 
-//output:
-//        v1 hashcode:1878169648
-//        v2 hashcode:1781241150

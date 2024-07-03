@@ -17,6 +17,10 @@ public class VehicleService {
 
     private Speaker speaker;
 
+    public VehicleService(){
+        System.out.println("VehicleService bean created...");
+    }
+
     public void playMusic(){
         String status = speaker.makeSound();
         System.out.println(status);
