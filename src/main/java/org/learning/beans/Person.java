@@ -1,13 +1,17 @@
 package org.learning.beans;
 
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component(value = "personBean")
+@Scope(BeanDefinition.SCOPE_SINGLETON)
 public class Person {
     private String name;
     private final Vehicle vehicle;
 
     public Person(Vehicle vehicle){
+        System.out.println("Person bean created");
         this.vehicle = vehicle;
     }
 

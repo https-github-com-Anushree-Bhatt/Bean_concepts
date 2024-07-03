@@ -10,11 +10,15 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(Config.class);
-        VehicleService v1 = context.getBean(VehicleService.class);
-        VehicleService v2 = context.getBean("vehicleService", VehicleService.class);
-        System.out.println("Hashcode of v1:"+(v1.hashCode()));
-        System.out.println("Hashcode of v1:"+(v2.hashCode()));
-        if (v1.equals(v2))
-            System.out.println("VehicleService Bean is singleton scope ");
+        System.out.println("Before retrieving Person Bean...");
+        Person p = context.getBean(Person.class);
+        System.out.println("After retrieving person bean...");
+
     }
 }
+
+//Op:-
+//        Person bean created
+//        Before retrieving Person Bean...
+//        After retrieving person bean...
+//So person bean is created and stored in container even before main method is executed in case of singleton - eager instantiation

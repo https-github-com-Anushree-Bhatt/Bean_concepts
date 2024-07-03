@@ -11,7 +11,7 @@ public class Vehicle {
     private VehicleService vehicleService;
 
     public Vehicle(){
-        System.out.println("Vehicle created....");
+
     }
 
     public String getName() {
