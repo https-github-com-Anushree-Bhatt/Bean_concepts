@@ -28,50 +28,51 @@ public class VehicleService {
         System.out.println("VehicleService bean created...");
     }
 
-    public void playMusic(Boolean vehicleStarted, Song song){
-        Instant start = Instant.now();
-        logger.info("Starting the method execution");
+    public String playMusic(Boolean vehicleStarted, Song song){
+//        Instant start = Instant.now();
+//        logger.info("Starting the method execution");
         String music_status = null;
         if (vehicleStarted){
             music_status = speaker.makeSound(song);
-            System.out.println(music_status);
         }else
             logger.log(Level.SEVERE, "Vehicle is not started to perform the execution");
-        logger.info("Ending the method execution");
-        Instant stop = Instant.now();
-        long gap = Duration.between(start,stop).toMillis();
-        logger.info("Time took to execute the method:"+gap);
+//        logger.info("Ending the method execution");
+//        Instant stop = Instant.now();
+//        long gap = Duration.between(start,stop).toMillis();
+//        logger.info("Time took to execute the method:"+gap);
+        return music_status;
     }
 
-    public void moveVehicle(Boolean vehicleStarted){
-        Instant start = Instant.now();
-        logger.info("Starting the method execution");
+    public String moveVehicle(Boolean vehicleStarted){
+//        Instant start = Instant.now();
+//        logger.info("Starting the method execution");
+        String status = null;
         if(vehicleStarted){
-            String status = tyre.rotate();
-            System.out.println(status);
+            status = tyre.rotate();
         }else {
             logger.log(Level.SEVERE, "Vehicle is not started to perform the execution");
         }
-        logger.info("Ending the method execution");
-        Instant stop = Instant.now();
-        long gap = Duration.between(start,stop).toMillis();
-        logger.info("Time took to execute the method:"+gap);
+//        logger.info("Ending the method execution");
+//        Instant stop = Instant.now();
+//        long gap = Duration.between(start,stop).toMillis();
+//        logger.info("Time took to execute the method:"+gap);
+        return status;
     }
 
-    public void applyBrakes(Boolean vehicleStarted){
-        Instant start = Instant.now();
-        logger.info("Starting the method execution");
+    public String applyBrakes(Boolean vehicleStarted){
+//        Instant start = Instant.now();
+//        logger.info("Starting the method execution");
         String status = null;
         if(vehicleStarted){
             status = tyre.stop();
-            System.out.println(status);
         }else {
             logger.log(Level.SEVERE, "Vehicle is not started to perform the execution");
         }
-        logger.info("Ending the method execution");
-        Instant stop = Instant.now();
-        long gap = Duration.between(start,stop).toMillis();
-        logger.info("Time took to execute the method:"+gap);
+//        logger.info("Ending the method execution");
+//        Instant stop = Instant.now();
+//        long gap = Duration.between(start,stop).toMillis();
+//        logger.info("Time took to execute the method:"+gap);
+        return status;
     }
     @Autowired
     public void setSpeaker(@Qualifier(value = "boat")Speaker speaker){
