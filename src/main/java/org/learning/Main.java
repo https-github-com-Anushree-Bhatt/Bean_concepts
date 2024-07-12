@@ -15,11 +15,11 @@ public class Main {
         Song song = new Song();
         song.setTitle("How you like that!");
         song.setSinger("Black Pink");
-        String playMusicStatus = v.playMusic(true,song);
+        String playMusicStatus = v.playMusic(false,song);
         System.out.println("--------------------------------");
-        String moveVehicleStatus = v.moveVehicle(true);
+        String moveVehicleStatus = v.moveVehicle(false);
         System.out.println("--------------------------------");
-        String applyBrakesStatus = v.applyBrakes(true);
+        String applyBrakesStatus = v.applyBrakes(false);
 
 
     }
