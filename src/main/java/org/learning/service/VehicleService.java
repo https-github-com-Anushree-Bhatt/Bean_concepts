@@ -72,7 +72,8 @@ public class VehicleService {
 //        Instant stop = Instant.now();
 //        long gap = Duration.between(start,stop).toMillis();
 //        logger.info("Time took to execute the method:"+gap);
-        return status;
+        throw new NullPointerException("Daamn ! It's null pointer exception");
+//        return status;
     }
     @Autowired
     public void setSpeaker(@Qualifier(value = "boat")Speaker speaker){

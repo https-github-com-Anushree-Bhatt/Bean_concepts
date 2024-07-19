@@ -8,6 +8,6 @@ import org.springframework.stereotype.Component;
 public class Boat implements Speaker {
     @Override
     public String makeSound(Song song){
-        return "Boat speakers playing the track.....\n "+song.getTitle()+" song sung by "+song.getTitle();
+        return "Boat speakers playing the track.....\n "+song.getTitle()+" song sung by "+song.getSinger();
     }
 }
